@@ -1,0 +1,80 @@
+.string {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(25, 123, 25);
+  border-radius: 30px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.string:nth-child(6) {
+  left: 90%;
+}
+
+.string:nth-child(5) {
+  left: 71.5%;
+}
+
+.string:nth-child(4) {
+  left: 53%;
+}
+
+.string:nth-child(3) {
+  left: 33.5%;
+}
+
+.string:nth-child(2) {
+  left: 14%;
+}
+
+.string:nth-child(1) {
+  left: -4%;
+}
+
+.string_none {
+  display: none;
+}
+
+/* .string_one {
+  left: -4%;
+}
+
+.string_two {
+  left: 14%;
+}
+
+.string_three {
+  left: 33.5%;
+}
+
+.string_four {
+  left: 53%;
+}
+
+.string_five {
+  left: 71.5%;
+} */
+
+/* .string_six {
+  left: 90%;
+} */
+
+.fret_one {
+  top: 5%;
+}
+
+.fret_two {
+  top: 30%;
+}
+
+.fret_three {
+  top: 55%;
+}
+
+.fret_four {
+  top: 80%;
+}

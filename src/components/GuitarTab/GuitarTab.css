@@ -1,0 +1,20 @@
+.chord {
+  margin-bottom: 30px;
+}
+
+.tabBg {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgb(0, 0, 0), transparent 2px), linear-gradient(90deg, rgb(0, 0, 0), transparent 1px);
+  background-size: 19% 25%;
+  background-position: top center;
+  background-color: rgb(235, 237, 202);
+}
+
+.tabs_list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
