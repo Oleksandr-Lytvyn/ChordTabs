@@ -1,9 +1,25 @@
+import { useEffect, useState } from 'react';
+
 import { getChord } from './components/GetChord/GetChord';
 import { GuitarTabsList } from './components/GuitarTabsList/GuitarTabsList';
+import { Navigation } from './components/Navigation/Navigation';
 import './index.css';
 
-// const chordPositions = db;
-// console.log(chordPositions);
+// const startChords = getChord('D', 'minor');
+
 export function App() {
-  return <GuitarTabsList chord={getChord('C', 'major')} />;
+  const [key, setKey] = useState('A');
+  const [suffix, setSuffix] = useState('minor');
+  const [chord, setChord] = useState({});
+  useEffect(() => {
+    console.log('useEffect');
+    setChord(getChord(key, suffix));
+  }, [key, suffix]);
+
+  return (
+    <>
+      <Navigation k={setKey} s={setSuffix} />
+      <GuitarTabsList chord={chord} />
+    </>
+  );
 }
