@@ -1,6 +1,6 @@
 import { getChord } from './components/GetChord/GetChord';
 import { GuitarTabsList } from './components/GuitarTabsList/GuitarTabsList';
-// import db from './db.json';
+import './index.css';
 
 // const chordPositions = db;
 // console.log(chordPositions);

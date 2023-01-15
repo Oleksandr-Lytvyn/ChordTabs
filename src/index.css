@@ -1,0 +1,102 @@
+.tabs_list {
+  display: flex;
+  gap: 50px;
+}
+
+.chord {
+  margin-bottom: 30px;
+  width: 400px;
+  background-color: darkcyan;
+}
+
+.tabBg {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(0, 0, 0), transparent 2px), linear-gradient(90deg, rgb(0, 0, 0), transparent 1px);
+  background-size: 19% 25%;
+  background-position: top center;
+  background-color: rgb(235, 237, 202);
+}
+
+.finger {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(25, 123, 25);
+  border-radius: 30px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.finger:nth-child(6) {
+  left: 89.2%;
+}
+
+.finger:nth-child(5) {
+  left: 70.3%;
+}
+
+.finger:nth-child(4) {
+  left: 51%;
+}
+
+.finger:nth-child(3) {
+  left: 32.5%;
+}
+
+.finger:nth-child(2) {
+  left: 13.5%;
+}
+
+.finger:nth-child(1) {
+  left: -5.5%;
+}
+
+.finger_none {
+  display: none;
+}
+
+/* .string_one {
+  left: -4%;
+}
+
+.string_two {
+  left: 14%;
+}
+
+.string_three {
+  left: 33.5%;
+}
+
+.string_four {
+  left: 53%;
+}
+
+.string_five {
+  left: 71.5%;
+} */
+
+/* .string_six {
+  left: 90%;
+} */
+
+.fret_one {
+  top: 5%;
+}
+
+.fret_two {
+  top: 30%;
+}
+
+.fret_three {
+  top: 55%;
+}
+
+.fret_four {
+  top: 80%;
+}

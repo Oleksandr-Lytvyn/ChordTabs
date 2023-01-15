@@ -1,9 +1,5 @@
-import db from '../../db.json';
+import tabs from '../../db.json';
 
-export function getChord(key, suffix) {
-  const chordKey = db.chords[key];
-  return chordKey.find((option) => option.suffix === suffix);
-}
-export function getTabs() {
-  console.log(db);
-}
+export const getChord = (key, suffix) => {
+  return tabs.chords[key].find((chord) => chord.suffix === suffix);
+};

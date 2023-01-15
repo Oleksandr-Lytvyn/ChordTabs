@@ -1,15 +1,16 @@
 import { Finger } from '../Finger/Finger';
 import { GuitarTabBg } from '../GuitarTabBg/GuitarTabBg';
-import '../GuitarTab/GuitarTab.css';
 import { BaseFret } from '../BaseFret/BaseFret';
 
 export function GuitarTab({ position }) {
   return (
-    <div className="tabBg">
-      <BaseFret />
-      {position.fingers.map((pos, index) => (
-        <Finger finger={pos} fret={position.frets[index]} str={index} />
-      ))}
+    <div className="chord">
+      <BaseFret fret={position.baseFret} />
+      <div className="tabBg">
+        {position.fingers.map((pos, index) => (
+          <Finger finger={pos} fret={position.frets[index]} str={index} />
+        ))}
+      </div>
     </div>
   );
 }
