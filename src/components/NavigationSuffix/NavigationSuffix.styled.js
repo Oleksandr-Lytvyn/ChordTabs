@@ -7,8 +7,9 @@ export const ListSuffixes = styled.ul`
   gap: 10px;
 `;
 
-export const ListItem = styled.ul`
-  background-color: rgb(178, 209, 215);
+export const ListItem = styled.li`
+  background-color: ${(props) => (props.active ? 'palevioletred' : 'white')};
   border-radius: 2px;
   padding: 3px;
 `;
+// rgb(178, 209, 215)

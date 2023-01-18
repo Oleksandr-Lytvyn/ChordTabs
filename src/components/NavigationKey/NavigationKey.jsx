@@ -2,9 +2,9 @@ import tabs from '../../db.json';
 import { KeyItem } from './NavigationKey.styled';
 import { KeyList } from './NavigationKey.styled';
 
-export const NavigationKey = ({ k }) => {
+export const NavigationKey = ({ sk }) => {
   const onClick = (event) => {
-    k(event.target.outerText);
+    sk(event.target.outerText);
   };
   return (
     <>
