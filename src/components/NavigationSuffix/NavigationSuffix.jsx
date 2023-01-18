@@ -8,16 +8,22 @@ export const NavigationSuffix = ({ ss, k }) => {
 
   // console.log(tabs.chords.A);
   let allSuffix = tabs.suffixes;
-  let activeSuffix = tabs.chords[k].map((chord) => {
-    return chord.suffix;
-  });
+  let activeSuffix = [];
+  console.log(tabs.chords[k]);
+
+  activeSuffix =
+    tabs.chords[k] &&
+    tabs.chords[k].map((chord) => {
+      return chord.suffix;
+    });
 
   const resultSuffixes = [];
 
   const createSuffixList = () => {
     for (const key of allSuffix) {
-      console.log(activeSuffix.find((suf) => suf === key));
-      if (activeSuffix.find((suf) => suf === key)) {
+      if (activeSuffix === undefined) {
+        return;
+      } else if (activeSuffix.find((suf) => suf === key)) {
         resultSuffixes.push({ suffix: key, isActive: true });
       } else resultSuffixes.push({ suffix: key, isActive: false });
     }
