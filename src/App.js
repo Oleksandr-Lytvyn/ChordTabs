@@ -13,9 +13,9 @@ export function App() {
   const [chord, setChord] = useState({});
   const [instrument, setInstrument] = useState('guit');
   useEffect(() => {
-    const findedChord = getChord(key, suffix);
+    const findedChord = getChord(key, suffix, instrument);
     setChord(findedChord);
-  }, [key, suffix]);
+  }, [instrument, key, suffix]);
 
   return (
     <>

@@ -5,7 +5,7 @@ export const ResultsWindow = ({ i, ch }) => {
   return (
     <>
       {i === 'guit' && <GuitarTabsList chord={ch} />}
-      {i === 'ukul' && <UkuleleTabsList />}
+      {i === 'ukul' && <UkuleleTabsList chord={ch} />}
     </>
   );
 };

@@ -9,7 +9,6 @@ export const NavigationSuffix = ({ ss, k }) => {
   // console.log(tabs.chords.A);
   let allSuffix = tabs.suffixes;
   let activeSuffix = [];
-  console.log(tabs.chords[k]);
 
   activeSuffix =
     tabs.chords[k] &&
