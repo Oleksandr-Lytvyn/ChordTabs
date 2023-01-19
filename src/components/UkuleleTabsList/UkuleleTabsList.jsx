@@ -1,4 +1,3 @@
-import tabs from '../../db-ukulele.json';
 import { nanoid } from 'nanoid';
 
 // console.log(tabs);

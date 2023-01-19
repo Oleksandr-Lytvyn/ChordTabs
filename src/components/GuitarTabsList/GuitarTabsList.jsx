@@ -1,4 +1,3 @@
-import tabs from '../../db.json';
 import { nanoid } from 'nanoid';
 
 // console.log(tabs);
