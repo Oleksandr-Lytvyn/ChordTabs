@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 export class WebMidi extends Component {
   playTestInstrument(note) {
-    this.midiSounds.playChordNow(3, [note], 2.5);
+    this.midiSounds.playChordNow(3, 55, 2.5);
   }
   render() {
     return (

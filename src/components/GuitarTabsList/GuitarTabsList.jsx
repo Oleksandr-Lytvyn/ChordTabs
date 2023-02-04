@@ -1,15 +1,7 @@
 import { nanoid } from 'nanoid';
 import styled from 'styled-components';
 import { ChordGuitar } from '../ChordGuitar/ChordGuitar';
-
-const StyledPosition = styled.div`
-  background-color: #ddd4d4;
-  width: 200px;
-  height: 200px;
-  font-size: 10px;
-  display: flex;
-  flex-wrap: wrap;
-`;
+import { StyledPosition } from './GuitarTabsList.styled';
 
 const StyledGuitarTabsList = styled.div`
   /* display: flex; */
@@ -17,7 +9,6 @@ const StyledGuitarTabsList = styled.div`
 `;
 
 const Position = ({ pos }) => {
-  // console.log(pos);
   const steps = [];
   for (let index = 0; index < pos.fingers.length; index++) {
     steps.push({ fret: pos.frets[index], finger: pos.fingers[index] });
@@ -49,10 +40,12 @@ const Position = ({ pos }) => {
 export const GuitarTabsList = ({ chord }) => {
   return (
     <>
+      {!chord && <div>no results</div>}
+
       <StyledGuitarTabsList>
-        <h1>Guitar</h1>
+        {/* <h1>Guitar</h1> */}
         <h2>
-          {chord.key}_{chord.suffix}
+          {chord.key} {chord.suffix}
         </h2>
         <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
           {Object.keys(chord).length > 0 &&

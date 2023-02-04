@@ -6,10 +6,10 @@ import { NavigationInst } from '../NavigationInst/NavigationInst';
 export const Navigation = (options) => {
   return (
     <>
+      <NavigationInst i={options.i} />
       <NavigationKey sk={options.sk} />
       <NavigationSuffix ss={options.ss} k={options.k} />
       {/* <NavigationForm k={options.k} s={options.s} /> */}
-      <NavigationInst i={options.i} />
     </>
   );
 };

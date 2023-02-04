@@ -7,8 +7,8 @@ import { WebMidi } from './components/WebMidi/WebMidi';
 import './index.css';
 
 export function App() {
-  const [key, setKey] = useState('A');
-  const [suffix, setSuffix] = useState('minor');
+  const [key, setKey] = useState('');
+  const [suffix, setSuffix] = useState('');
   const [chord, setChord] = useState({});
   const [instrument, setInstrument] = useState('guit');
   useEffect(() => {
@@ -21,7 +21,6 @@ export function App() {
       {/* <WebMidi /> */}
       <Navigation sk={setKey} k={key} ss={setSuffix} i={setInstrument} />
       {chord && <ResultsWindow ch={chord} i={instrument} />}
-      {!chord && <div>no results</div>}
     </>
   );
 }
