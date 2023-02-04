@@ -11,4 +11,8 @@ export const KeyItem = styled.li`
   background-color: rgb(216, 214, 183);
   border-radius: 2px;
   padding: 10px;
+  :hover,
+  :focus {
+    cursor: pointer;
+  }
 `;

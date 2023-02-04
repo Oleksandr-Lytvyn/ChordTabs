@@ -11,5 +11,9 @@ export const ListItem = styled.li`
   background-color: ${(props) => (props.active ? 'palevioletred' : 'white')};
   border-radius: 2px;
   padding: 3px;
+  :hover,
+  :focus {
+    cursor: pointer;
+  }
 `;
 // rgb(178, 209, 215)
