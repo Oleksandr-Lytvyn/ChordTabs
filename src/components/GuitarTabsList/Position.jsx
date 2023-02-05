@@ -13,11 +13,11 @@ export const Position = ({ pos, play, setNotes }) => {
     <>
       <StyledPosition>
         <h3>Position</h3>
-        <p>baseFret:{pos.baseFret}</p>
+        {/* <p>baseFret:{pos.baseFret}</p>
         <p>capo:{typeof pos.capo}</p>
-        <p>barres:{pos.barres}</p>
+        <p>barres:{pos.barres}</p> */}
         <ChordGuitar steps={steps} midi={pos.midi} play={play} setNotes={setNotes} />
-        <ul>
+        {/* <ul>
           {steps.map((step) => {
             return (
               <li key={nanoid()}>
@@ -27,7 +27,7 @@ export const Position = ({ pos, play, setNotes }) => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </StyledPosition>
     </>
   );

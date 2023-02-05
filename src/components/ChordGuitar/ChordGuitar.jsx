@@ -18,9 +18,21 @@ const Finger = ({ step }) => {
 
   if (step.finger === 0) {
     finger.isFinger = false;
-  } else if (step.finger > 0) {
+  } else if (step.finger === 1) {
     finger.isFinger = true;
+    finger.finger = 1;
+  } else if (step.finger === 2) {
+    finger.isFinger = true;
+    finger.finger = 2;
+  } else if (step.finger === 3) {
+    finger.isFinger = true;
+    finger.finger = 3;
+  } else if (step.finger === 4) {
+    finger.isFinger = true;
+    finger.finger = 4;
   }
+
+  console.log(finger);
 
   return (
     <div
@@ -35,7 +47,6 @@ const Finger = ({ step }) => {
 };
 
 export const ChordGuitar = ({ steps, midi, play, setNotes }) => {
-  console.log(midi);
   return (
     <div
       style={{
@@ -47,11 +58,13 @@ export const ChordGuitar = ({ steps, midi, play, setNotes }) => {
       }}
       onClick={(e) => {
         setNotes(midi);
-        play();
+        setTimeout(() => {
+          play();
+        }, 100);
       }}
     >
       {steps.map((step) => {
-        return <Finger key={nanoid()} step={step} />;
+        return <Finger key={nanoid()} step={step}></Finger>;
       })}
     </div>
   );
