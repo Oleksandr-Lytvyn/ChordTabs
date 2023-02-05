@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getChord } from './components/GetChord/GetChord';
 import { Navigation } from './components/Navigation/Navigation';
 import { ResultsWindow } from './components/ResultsWindow/ResultsWindow';
-import { WebMidi } from './components/WebMidi/WebMidi';
+// import { WebMidi } from './components/WebMidiWindow/WebMidiWindow';
 import './index.css';
 
 export function App() {
@@ -18,7 +18,6 @@ export function App() {
 
   return (
     <>
-      {/* <WebMidi /> */}
       <Navigation sk={setKey} k={key} ss={setSuffix} i={setInstrument} />
       {chord && <ResultsWindow ch={chord} i={instrument} />}
     </>

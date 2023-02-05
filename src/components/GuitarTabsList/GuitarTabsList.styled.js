@@ -8,3 +8,4 @@ export const StyledPosition = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+export const StyledGuitarTabsList = styled.div``;

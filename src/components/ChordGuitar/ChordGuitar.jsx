@@ -22,8 +22,6 @@ const Finger = ({ step }) => {
     finger.isFinger = true;
   }
 
-  console.log(finger);
-
   return (
     <div
       style={{
@@ -36,7 +34,8 @@ const Finger = ({ step }) => {
   );
 };
 
-export const ChordGuitar = ({ steps }) => {
+export const ChordGuitar = ({ steps, midi, play, setNotes }) => {
+  console.log(midi);
   return (
     <div
       style={{
@@ -45,6 +44,10 @@ export const ChordGuitar = ({ steps }) => {
         background: '#D3F6EE',
         display: 'flex',
         justifyContent: 'space-between',
+      }}
+      onClick={(e) => {
+        setNotes(midi);
+        play();
       }}
     >
       {steps.map((step) => {
