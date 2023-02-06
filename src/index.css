@@ -1,4 +1,13 @@
-.test {
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  width: 90vw;
+  margin: 0 auto;
+}
+ul {
+  padding-left: 0;
   list-style: none;
-  position: absolute;
 }

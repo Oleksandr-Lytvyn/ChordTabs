@@ -4,7 +4,7 @@ export const NavigationInst = ({ i }) => {
   return (
     <>
       <BtnsList>
-        <li>
+        <li style={{ flexGrow: '1' }}>
           <Button
             type="button"
             onClick={() => {
@@ -14,7 +14,7 @@ export const NavigationInst = ({ i }) => {
             guitar
           </Button>
         </li>
-        <li>
+        <li style={{ flexGrow: '1' }}>
           <Button
             type="button"
             onClick={() => {

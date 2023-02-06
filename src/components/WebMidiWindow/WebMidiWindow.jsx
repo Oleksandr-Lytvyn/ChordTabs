@@ -11,7 +11,7 @@ export class WebMidiWindow extends Component {
     console.log(this);
     return (
       <div className="App">
-        <button onClick={this.playTestInstrument.bind(this)}>Play</button>
+        {/* <button onClick={this.playTestInstrument.bind(this)}>Play</button> */}
         {this.props.i === 'guit' && (
           <GuitarTabsList
             chord={this.props.ch}

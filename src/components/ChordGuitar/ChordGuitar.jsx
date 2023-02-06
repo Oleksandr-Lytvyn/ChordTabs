@@ -7,13 +7,13 @@ const Finger = ({ step }) => {
   } else if (step.fret === 0) {
     finger.vertical = '0';
   } else if (step.fret === 1) {
-    finger.vertical = '3px';
+    finger.vertical = '0px';
   } else if (step.fret === 2) {
-    finger.vertical = '28px';
+    finger.vertical = '25px';
   } else if (step.fret === 3) {
-    finger.vertical = '53px';
+    finger.vertical = '50px';
   } else if (step.fret === 4) {
-    finger.vertical = '78px';
+    finger.vertical = '75px';
   }
 
   if (step.finger === 0) {
@@ -32,17 +32,24 @@ const Finger = ({ step }) => {
     finger.finger = 4;
   }
 
-  // console.log(finger);
+  // console.log(step);
 
   return (
     <div
       style={{
         width: '16px',
-        height: '20px',
+        height: '16px',
         background: `${finger.isFinger ? 'green' : 'transparent'}`,
         transform: `translateY(${finger.vertical})`,
         textAlign: 'center',
         borderRadius: '50%',
+        marginTop: '5px',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: '7px solid transparent',
+        boxSizing: 'border-box',
       }}
     >
       {finger.finger}
@@ -52,30 +59,33 @@ const Finger = ({ step }) => {
 
 export const ChordGuitar = ({ steps, midi, play, setNotes }) => {
   return (
-    <div
-      style={{
-        width: ' 100px',
-        height: '100px',
-        background: `linear-gradient( 
-#bbb, 
+    <div style={{ display: 'flex', background: '#F0E9C6 ' }}>
+      <div
+        style={{
+          width: ' 100px',
+          height: '100px',
+          background: `linear-gradient( 
+#161515, 
 transparent 3px), linear-gradient( 90deg, 
-#bbb, 
-transparent 3px)`,
-        backgroundSize: '16.6px 25px',
-        backgroundPosition: '8px 0',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-      onClick={(e) => {
-        setNotes(midi);
-        setTimeout(() => {
-          play();
-        }, 100);
-      }}
-    >
-      {steps.map((step) => {
-        return <Finger key={nanoid()} step={step}></Finger>;
-      })}
+#100f0f, 
+transparent 1px)`,
+          backgroundSize: '16.6px 25px',
+          backgroundPosition: '8px 0',
+          display: 'flex',
+          justifyContent: 'space-between',
+          // flexGrow: '1',
+        }}
+        onClick={(e) => {
+          setNotes(midi);
+          setTimeout(() => {
+            play();
+          }, 100);
+        }}
+      >
+        {steps.map((step) => {
+          return <Finger key={nanoid()} step={step}></Finger>;
+        })}
+      </div>
     </div>
   );
 };
